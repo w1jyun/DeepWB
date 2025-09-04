@@ -3,19 +3,19 @@ import logging
 import os
 import torch
 from PIL import Image
-from arch import deep_wb_model
-import utilities.utils as utls
-from utilities.deepWB import deep_wb
-import arch.splitNetworks as splitter
-from arch import deep_wb_single_task
+from DeepWB.arch import deep_wb_model
+import DeepWB.utilities.utils as utls
+from DeepWB.utilities.deepWB import deep_wb
+import DeepWB.arch.splitNetworks as splitter
+from DeepWB.arch import deep_wb_single_task
 import torch
 from PIL import Image
 from torchvision import transforms
 from torchvision.utils import save_image
 import torch.nn as nn
 
-class DeepWB(nn.module):
-    def __init__(self, model_dir: str = "./models"):
+class DeepWB(nn.Module):
+    def __init__(self, model_dir: str = "/home/w1jyun/CVPR26/DeepWB/models"):
         super().__init__()
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         # load awb net

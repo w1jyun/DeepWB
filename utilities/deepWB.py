@@ -10,7 +10,7 @@ __credits__ = ["Mahmoud Afifi"]
 import numpy as np
 import torch
 from torchvision import transforms
-import utilities.utils as utls
+import DeepWB.utilities.utils as utls
 
 import torch.nn.functional as F
 from torchvision.transforms import GaussianBlur
